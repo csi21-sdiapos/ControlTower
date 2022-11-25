@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower.csproj": {}
+    "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower\\ControlTower.csproj": {}
   },
   "projects": {
-    "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower.csproj": {
+    "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower\\ControlTower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower.csproj",
+        "projectUniqueName": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower\\ControlTower.csproj",
         "projectName": "ControlTower",
-        "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower.csproj",
+        "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower\\ControlTower.csproj",
         "packagesPath": "C:\\Users\\csi21-sdiapos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\obj\\",
+        "outputPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\csi21-sdiapos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\DAL\\DAL.csproj"
+              "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\DAL\\DAL.csproj"
               }
             }
           }
@@ -44,9 +44,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.0, )"
             }
@@ -74,14 +86,14 @@
         }
       }
     },
-    "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\DAL\\DAL.csproj": {
+    "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\csi21-sdiapos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\csi21-sdiapos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -110,6 +122,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

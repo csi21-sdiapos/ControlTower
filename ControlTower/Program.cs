@@ -1,7 +1,14 @@
+using DAL.Modelo;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<CspharmaContext>(
+    o => o.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSqlConnection")));
 
 var app = builder.Build();
 

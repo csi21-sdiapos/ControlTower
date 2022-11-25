@@ -416,6 +416,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0"
         },
         "compile": {
@@ -1052,7 +1054,10 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "DAL >= 1.0.0",
-      "Microsoft.EntityFrameworkCore.Design >= 7.0.0"
+      "Microsoft.EntityFrameworkCore >= 7.0.0",
+      "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
+      "Microsoft.EntityFrameworkCore.Relational >= 7.0.0",
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.0"
     ]
   },
   "packageFolders": {
@@ -1061,11 +1066,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower.csproj",
+      "projectUniqueName": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower\\ControlTower.csproj",
       "projectName": "ControlTower",
-      "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower.csproj",
+      "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower\\ControlTower.csproj",
       "packagesPath": "C:\\Users\\csi21-sdiapos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\obj\\",
+      "outputPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\ControlTower\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\csi21-sdiapos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1082,8 +1087,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\DAL\\DAL.csproj"
+            "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\csi21-sdiapos\\Desktop\\vs2022-workspace\\ControlTower\\DAL\\DAL.csproj"
             }
           }
         }
@@ -1098,9 +1103,21 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
+          "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[7.0.0, )"
           }
