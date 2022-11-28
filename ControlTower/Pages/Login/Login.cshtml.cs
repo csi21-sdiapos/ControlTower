@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DAL.Modelo;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Npgsql;
 
@@ -12,18 +13,25 @@ namespace ControlTower.Pages.Login
             return Page();
         }
         */
-     
-        public IActionResult MiLogin()
+
+        public DlkCatAccEmpleado empleado { get; set; }
+
+        public void OnGet()
         {
-            string name = "User1";
-            string password = "Clave1";
+        }
+
+        // https://stackoverflow.com/questions/66711696/razor-pages-form-is-not-hitting-the-post-method
+        [HttpPost]
+        [ActionName("MiLogin")]
+        public void OnPost(DlkCatAccEmpleado empleado)
+        {
             //Recogemos la información de la vista
             //Hacemos la conexion
-            using var connection = new NpgsqlConnection("Host=localhost;Port=5432;Pooling=true;Database=CSPharma;UserId=postgres;Password=12345;");
+            var connection = new NpgsqlConnection("Host=localhost;Port=5432;Pooling=true;Database=CSPharma;UserId=postgres;Password=12345;");
             Console.WriteLine("ABRIENDO CONEXION");
             connection.Open();
 
-            NpgsqlCommand consulta = new NpgsqlCommand($"SELECT * FROM \"dlk_informacional\".\"dlk_cat_acc_empleados\" WHERE cod_empleado='{name}' AND clave_empleado='{password}'", connection);
+            NpgsqlCommand consulta = new NpgsqlCommand($"SELECT * FROM \"dlk_informacional\".\"dlk_cat_acc_empleados\" WHERE cod_empleado='{empleado.CodEmpleado}' AND clave_empleado='{empleado.ClaveEmpleado}'", connection);
             NpgsqlDataReader resultadoConsulta = consulta.ExecuteReader();
 
 
@@ -38,8 +46,6 @@ namespace ControlTower.Pages.Login
 
             Console.WriteLine("Cerrando conexion");
             connection.Close();
-
-            return Page();
         }
 
     }
