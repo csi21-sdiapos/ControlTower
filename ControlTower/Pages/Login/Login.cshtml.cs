@@ -23,7 +23,7 @@ namespace ControlTower.Pages.Login
         // https://stackoverflow.com/questions/66711696/razor-pages-form-is-not-hitting-the-post-method
         [HttpPost]
         [ActionName("MiLogin")]
-        public void OnPost(DlkCatAccEmpleado empleado)
+        public void OnPostSubmit(DlkCatAccEmpleado empleado)
         {
             //Recogemos la información de la vista
             //Hacemos la conexion
